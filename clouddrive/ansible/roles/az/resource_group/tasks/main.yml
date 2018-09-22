@@ -3,4 +3,3 @@
   azure_rm_resourcegroup:
     name: "{{az_group}}"
     location: "{{az_location}}"
-    state: present

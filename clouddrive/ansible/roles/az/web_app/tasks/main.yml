@@ -1,6 +1,6 @@
 ---
 - name: Create web application deployment
   azure_rm_deployment:
+    state: present
     name: "{{app_name}}"
     resource_group: "{{az_group}}"
-    account_type: "{{az_account_type}}"
