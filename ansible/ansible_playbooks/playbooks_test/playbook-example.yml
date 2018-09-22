@@ -1,0 +1,22 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Update package list
+    apt: update_cache=yes cache_valid_time=36000
+
+- hosts: database
+  vars:
+    fixture_name: fixtures.sql
+
+  tasks:
+  - name: Install MySQL
+    apt: name=mysql-server state=present
+
+  - name: Copy fixtures
+    copy: src={{fixture_name}}
+      dest=/tmp/{{fixture_name}}
+  
+  # - name: Copy fixtures
+  #   template: src=nginx.conf.j2
+  #     dest=/etc/nginx/nginx.conf

@@ -1,0 +1,25 @@
+---
+# Azure Cloud Shell paths
+az_shell_root: /home/david/clouddrive
+az_python3_bin: /opt/az/bin/python3
+az_tmp_root: /tmp
+# Azure Ansible paths
+az_ansible_root: "{{az_shell_root}}/ansible"
+az_ansible_test_root: "{{az_ansible_root}}/playbooks_testing"
+az_ansible_stag_root: "{{az_ansible_root}}/playbooks_staging"
+az_ansible_prod_root: "{{az_ansible_root}}/playbooks_production"
+
+# Azure Ansible baseline vars
+#   - {{app_name}} required in playbook command
+az_account_type: Standard_LRS
+az_location: "South Central US"
+az_group: "{{app_name}}_group"
+az_plan: "{{app_name}}_plan"
+app_server: "{{app_name}}_server"
+app_db: "{{app_name}}_db"
+
+# Other module options:
+# 	- security group
+# 	- public ip
+# 	- load balancer
+#   - azure image

@@ -1,0 +1,14 @@
+---
+- name: Loading RPG
+  template:
+    src: rpg_test.py
+    dest: rpg_test.py
+
+- name: Initialize RPG
+  debug:
+    msg: Do stuff
+
+- name: Unloading RPG
+  file:
+    path: rpg_test.py
+    state: absent

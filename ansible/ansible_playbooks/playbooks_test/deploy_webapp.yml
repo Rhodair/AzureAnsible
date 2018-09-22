@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    app_name: "david_rachwalik"
+  roles:
+    - az/web_app
+    - az/database
+    - az/identity
