@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ansible_playbooks
+namespace ansible
 {
     class Program
     {
