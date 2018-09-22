@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    app_name: "david_rachwalik"
+  roles:
+    - az/resource_group
+    # - az/web_app
+    # - az/database
+    # - az/identity

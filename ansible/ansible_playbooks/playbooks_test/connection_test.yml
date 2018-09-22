@@ -1,6 +1,14 @@
 ---
+# Quickstart for Bash in Azure Cloud Shell
+# https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
+
 - hosts: localhost
+  connection: local
+  gather_facts: false
   tasks:
+    - name: Standard ping test
+      ping:
+
     - name: Testing
       debug:
-        msg: Hello, Ansible
+        msg: "Hello, Ansible"
