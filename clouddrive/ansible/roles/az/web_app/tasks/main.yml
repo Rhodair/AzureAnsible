@@ -1,4 +1,7 @@
 ---
+# Products available by region
+# https://azure.microsoft.com/en-us/global-infrastructure/services/
+
 - name: Create web application deployment
   azure_rm_deployment:
     state: present
