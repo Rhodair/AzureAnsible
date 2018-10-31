@@ -1,4 +1,4 @@
 ---
 dependencies:
   - { role: az/resource_group }
-  - { role: az/storage_plan }
+  # - { role: az/storage_plan }
